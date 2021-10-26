@@ -40,7 +40,7 @@ shouldAnalize ?
 module.exports = {
     entry: './src/assets/index.js',
     output: {
-        path: path.resolve(__dirname,'dist'),
+        path: path.resolve(__dirname,'docs'),
         filename: '[name].[contenthash].js',
         assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
