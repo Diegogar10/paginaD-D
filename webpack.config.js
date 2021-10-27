@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -15,15 +16,19 @@ const plugins = [
             filename: 'assets/[name][contenthash].css'
         }
     ),
-    /* new CopyPlugin({
+    new CopyPlugin({
         patterns: [
+            {
+                from: path.resolve(__dirname,"src","assets/icons"),
+                to: "assets/icons"
+            },
             {
                 from: path.resolve(__dirname,"src","assets/images"),
                 to: "assets/images"
             }
         ]
     }, 
-    ), */
+    ), 
 ];
 const shouldAnalize = process.argv.includes('--analyze');
 

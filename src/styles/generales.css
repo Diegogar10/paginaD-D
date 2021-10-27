@@ -10,6 +10,11 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  position: relative;
+  height: 100vh;
+}
+
 .header {
   width: 100%;
   display: -webkit-box;
@@ -19,6 +24,9 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  border-top: #1C1464 solid 15px;
+  -webkit-box-shadow: #1C1464 0px 0px 10px;
+          box-shadow: #1C1464 0px 0px 10px;
 }
 .header__logo {
   width: 25%;
@@ -37,9 +45,9 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .header__nav ul {
   display: -webkit-box;
@@ -47,10 +55,103 @@ html {
   display: flex;
 }
 .header__nav ul li {
+  position: relative;
   list-style: none;
   margin: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .header__nav ul li a {
+  display: block;
+  padding: 6px;
+  color: #64145C;
   font-size: 1.8rem;
   text-decoration: none;
+}
+.header__nav ul li a:hover {
+  color: #F1C424;
+  text-shadow: #1C146420 0px 0px 2px;
+}
+.header__nav ul li:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+.header__nav ul li::before {
+  content: "";
+  border: #F1C424 solid 2px;
+  border-radius: 10px;
+  position: absolute;
+  right: -15px;
+  left: -15px;
+  top: -15px;
+  bottom: -15px;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.header__nav ul li:hover::before {
+  right: -6px;
+  left: -6px;
+  top: -6px;
+  bottom: -6px;
+  opacity: 1;
+}
+
+.content {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.content__banner, .banner__container {
+  border-radius: 20px;
+  width: 70%;
+  height: 65vh;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.banner__container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modal {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #000000B9;
+}
+
+.modal__title {
+  font-size: 3rem;
+  color: seashell;
+}
+
+.modal__message {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #F1C424;
+  margin: 20px;
+}
+
+.modal__icon, .modal__icon img {
+  width: 300px;
 }

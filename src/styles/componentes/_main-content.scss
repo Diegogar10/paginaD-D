@@ -1,0 +1,18 @@
+.content {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.content__banner, .banner__container {
+    border-radius: 20px;
+    width: 70%;
+    height: 65vh;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.banner__container img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}

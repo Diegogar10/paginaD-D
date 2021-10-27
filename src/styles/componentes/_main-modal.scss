@@ -1,0 +1,29 @@
+.modal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #000000B9;
+    
+}
+
+.modal__title {
+    font-size: 3.0rem;
+    color: seashell;
+}
+
+.modal__message {
+    font-size: 2.0rem;
+    font-weight: 300;
+    color: $color-terciario;
+    margin: 20px;    
+}
+
+.modal__icon, .modal__icon img {
+    width: 300px;
+}
