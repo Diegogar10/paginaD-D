@@ -1,3 +1,12 @@
+$Fuente-principal: 'Signika', sans-serif;
+
+$color-primario: #1C1464;
+$color-secundario:#64145C;
+$color-terciario: #F1C424;
+$color-fondoSuave: #B4B2D6;
+$color-iluminacion: #83FFE7;
+$color-variacion1: #8C84D4;
+$color-variacion2: #11FAD4;
 
 
 *{
@@ -6,6 +15,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: $Fuente-principal;
+    font-size: 62.5%;
+}
 
 .header {
     width: 100%;
@@ -13,10 +26,32 @@
     flex-direction: row;
 
     &__logo {
-        width: 30%;
+        width: 25%;
+        text-align: center;
+
+        img {
+            width: 200px;
+            object-fit: cover;
+        }
     }
 
     &__nav{
-        width: 50%;
+        width: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        ul {
+            display: flex;
+
+            li {
+                list-style: none;
+                margin: 10px;
+
+                a {
+                    font-size: 1.8rem;
+                    text-decoration: none;
+                }
+            }
+        }
     }
 }
