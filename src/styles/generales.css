@@ -140,6 +140,38 @@ body {
   background: #000000B9;
 }
 
+.invisible {
+  display: none;
+}
+
+.modal__close {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.close__button {
+  width: 40px;
+  height: 40px;
+  color: #1C1464;
+  font-family: "Signika", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+}
+.close__button:hover {
+  background-color: #F1C424;
+  color: #8C84D4;
+  -webkit-box-shadow: #feffb3e8 0 0 5px;
+          box-shadow: #feffb3e8 0 0 5px;
+}
+
 .modal__title {
   font-size: 3rem;
   color: seashell;

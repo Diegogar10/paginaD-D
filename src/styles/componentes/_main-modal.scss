@@ -11,6 +11,33 @@
     background: #000000B9;
     
 }
+.invisible {
+    display: none;
+}
+.modal__close {
+    width: 40%;
+    display: flex;
+    justify-content: end;
+}
+  
+  .close__button {
+    width: 40px;
+    height: 40px;
+    color: $color-primario;
+    font-family: $Fuente-principal;
+    font-size: 1.8rem;
+    font-weight: 900;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    
+    &:hover{
+        background-color: $color-terciario;
+        color: $color-variacion1;
+        box-shadow: #feffb3e8 0 0 5px;
+
+    }
+  }
 
 .modal__title {
     font-size: 3.0rem;
