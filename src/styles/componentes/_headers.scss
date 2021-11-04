@@ -31,11 +31,11 @@ body {
     flex-direction: row;
     border-top: $color-primario solid 15px;
     box-shadow: $color-primario 0px 0px 10px;
-
+    
     &__logo {
         width: 25%;
         text-align: center;
-
+        
         img {
             width: 200px;
             object-fit: cover;
@@ -47,6 +47,8 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        overflow: hidden;
+        
         ul {
             display: flex;
             li {
@@ -90,6 +92,46 @@ body {
                 top: -6px;
                 bottom: -6px;
                 opacity: 1;
+            }
+        }
+
+        .header_search {
+
+            position: relative;
+            margin-right: -15px;
+
+            input {
+                border: none;
+                font-family: $Fuente-principal;
+                font-size: 1.8rem;
+                border-radius: 20px;
+                background: $color-terciario;
+                color: $color-primario;
+                width: 220px;
+                height: 35px;
+                padding: 10px;
+                
+                &::placeholder {
+                    padding-left: 10px;
+                    font-weight: 100;
+                    color: white;
+                }
+                &:focus-visible {
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            img {
+                position: absolute;
+                right: 20px;
+                top: 7px;
+                width: 20px;
+                height: 20px;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }

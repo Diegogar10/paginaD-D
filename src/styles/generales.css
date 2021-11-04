@@ -48,6 +48,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
 }
 .header__nav ul {
   display: -webkit-box;
@@ -96,6 +97,60 @@ body {
   top: -6px;
   bottom: -6px;
   opacity: 1;
+}
+.header__nav .header_search {
+  position: relative;
+  margin-right: -15px;
+}
+.header__nav .header_search input {
+  border: none;
+  font-family: "Signika", sans-serif;
+  font-size: 1.8rem;
+  border-radius: 20px;
+  background: #F1C424;
+  color: #1C1464;
+  width: 220px;
+  height: 35px;
+  padding: 10px;
+}
+.header__nav .header_search input::-webkit-input-placeholder {
+  padding-left: 10px;
+  font-weight: 100;
+  color: white;
+}
+.header__nav .header_search input::-moz-placeholder {
+  padding-left: 10px;
+  font-weight: 100;
+  color: white;
+}
+.header__nav .header_search input:-ms-input-placeholder {
+  padding-left: 10px;
+  font-weight: 100;
+  color: white;
+}
+.header__nav .header_search input::-ms-input-placeholder {
+  padding-left: 10px;
+  font-weight: 100;
+  color: white;
+}
+.header__nav .header_search input::placeholder {
+  padding-left: 10px;
+  font-weight: 100;
+  color: white;
+}
+.header__nav .header_search input:focus-visible {
+  border: none;
+  outline: none;
+}
+.header__nav .header_search img {
+  position: absolute;
+  right: 20px;
+  top: 7px;
+  width: 20px;
+  height: 20px;
+}
+.header__nav .header_search img:hover {
+  cursor: pointer;
 }
 
 .content {
@@ -186,4 +241,29 @@ body {
 
 .modal__icon, .modal__icon img {
   width: 300px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__logo {
+    width: 18%;
+  }
+  .header__logo img {
+    width: 100%;
+  }
+  .header__nav {
+    width: 82%;
+  }
+  .header__nav ul {
+    margin-left: 20px;
+  }
+  .header__nav ul li {
+    margin: 5px;
+  }
+  .header__nav ul li a {
+    padding: 5px;
+    font-size: 1.5rem;
+  }
+  .header__nav .header_search input {
+    width: 190px;
+  }
 }
