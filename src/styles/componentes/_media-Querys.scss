@@ -35,3 +35,59 @@
         }
     }
 }
+
+@media screen and (max-width:768px) {
+    .header {
+
+        position: relative;
+
+        &__nav {
+            width: 100%;
+
+            .header_search {
+
+                margin: 0 auto;
+                width: 80%;
+
+                input {
+                    width: 100%;
+                }
+    
+            }
+            
+        }
+
+        &__logo {
+            display: none;
+        }
+        &__nav ul {
+            position: absolute;
+            flex-direction: column;
+            background-color: aliceblue;
+            width: 100vw;
+            height: 100vh;
+            align-items: center;
+            margin: 0;
+            top:55px;
+            right: 768px;
+            bottom: 0;
+            z-index: 1;
+            transition: all 0.5s;
+
+            li {
+                margin: 20px 0;
+                a {
+
+                    font-size: 1.8rem;
+                }
+            }
+        }
+        &__nav .visible {
+            transform: translateX(768px);
+        }
+        &__nav button {
+            display: block;
+            margin: 10px;
+        }
+    }
+}

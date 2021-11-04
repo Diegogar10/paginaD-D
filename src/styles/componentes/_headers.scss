@@ -23,6 +23,7 @@ html {
 body {
     position: relative;
     height: 100vh;
+    min-width: 320px;
 }
 
 .header {
@@ -49,6 +50,25 @@ body {
         justify-content: space-between;
         overflow: hidden;
         
+        button {
+
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: none;
+            background-color: $color-primario;
+            background-image: url(/src/assets/icons/menu.png);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: none;
+
+            &:hover {
+                background-color: #F1C424;
+            }
+        }
+
+
         ul {
             display: flex;
             li {

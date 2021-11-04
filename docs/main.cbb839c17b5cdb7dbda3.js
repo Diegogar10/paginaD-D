@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=e=>{document.querySelector(".header__nav ul").classList.toggle("visible")},t=e=>{document.querySelector(".modal").classList.add("invisible")},c=()=>{document.querySelector(".close__button").addEventListener("click",t)};(()=>{document.querySelector(".header__nav--button").addEventListener("click",e)})(),c()})();
