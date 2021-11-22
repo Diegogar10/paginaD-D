@@ -260,6 +260,42 @@ body {
   width: 300px;
 }
 
+.socialMedia {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  right: 35px;
+  top: 40%;
+  height: 55%;
+}
+.socialMedia__chat {
+  display: -ms-grid;
+  display: grid;
+  place-items: end center;
+}
+.socialMedia__chat .WhatsApp {
+  z-index: 3;
+}
+.socialMedia__chat .WhatsApp a {
+  -webkit-box-shadow: #8C84D4 0px 0px 5px;
+          box-shadow: #8C84D4 0px 0px 5px;
+}
+.socialMedia section, .socialMedia img {
+  width: 50px;
+  height: 50px;
+}
+.socialMedia section a, .socialMedia img a {
+  display: block;
+  margin: 8px 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-box-shadow: #1C1464 0px 0px 2px;
+          box-shadow: #1C1464 0px 0px 2px;
+}
+
 @media screen and (max-width: 1024px) {
   .header__logo {
     width: 18%;
@@ -282,6 +318,10 @@ body {
   }
   .header__nav .header_search input {
     width: 190px;
+  }
+
+  .socialMedia {
+    right: 10px;
   }
 }
 @media screen and (max-width: 768px) {

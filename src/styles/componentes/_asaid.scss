@@ -1,0 +1,35 @@
+.socialMedia {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    right: 35px;
+    top: 40%;
+    height: 55%;
+
+    &__chat{
+        display: grid;
+        place-items: end center;
+
+        .WhatsApp {
+            z-index: 3;
+            a{
+                box-shadow: $color-variacion1 0px 0px 5px;
+            }
+        }
+    }
+
+    section, img{
+        width: 50px;
+        height: 50px;
+        
+        a{
+            display: block;
+            margin: 8px 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: $color-primario 0px 0px 2px;
+        }
+    }
+
+}
