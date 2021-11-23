@@ -266,34 +266,76 @@ body {
   display: grid;
   -ms-grid-rows: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  right: 35px;
+  width: 120px;
+  right: 20px;
   top: 40%;
   height: 55%;
 }
 .socialMedia__chat {
   display: -ms-grid;
   display: grid;
-  place-items: end center;
+  place-items: end start;
 }
 .socialMedia__chat .WhatsApp {
   z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .socialMedia__chat .WhatsApp a {
   -webkit-box-shadow: #8C84D4 0px 0px 5px;
           box-shadow: #8C84D4 0px 0px 5px;
 }
-.socialMedia section, .socialMedia img {
-  width: 50px;
-  height: 50px;
+.socialMedia__chat .WhatsApp span {
+  display: none;
+  margin-left: 10px;
 }
-.socialMedia section a, .socialMedia img a {
+.socialMedia__chat .WhatsApp:hover > span {
   display: block;
+}
+.socialMedia__chat .WhatsApp:hover {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+.socialMedia section {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+.socialMedia section a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 8px 0;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   -webkit-box-shadow: #1C1464 0px 0px 2px;
           box-shadow: #1C1464 0px 0px 2px;
+}
+.socialMedia section a img, .socialMedia section a .WhatsApp__icon {
+  width: 50px;
+  height: 50px;
+}
+.socialMedia section a span {
+  display: none;
+  margin-left: 10px;
+}
+.socialMedia section:hover > a span {
+  display: block;
+}
+.socialMedia section:hover {
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
 }
 
 @media screen and (max-width: 1024px) {
