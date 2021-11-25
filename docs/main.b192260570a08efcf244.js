@@ -1,1 +1,0 @@
-(()=>{"use strict";const e=e=>{document.querySelector(".modal").classList.add("invisible")};(()=>{document.querySelector(".close__button").addEventListener("click",e)})()})();
