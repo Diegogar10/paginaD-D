@@ -35,7 +35,42 @@
         }
     }
     .socialMedia {
-        right: 10px;
+        
+        right: 0px;
+    
+        &__chat{
+            .WhatsApp {
+                flex-direction: column;
+                
+                &:hover {
+                    transform: translateX(0px);
+                }
+            }
+
+        }
+
+        section{
+            
+            width: 70px;
+            margin: 20px auto;
+
+            a{
+                flex-direction: column;
+                
+                span {
+                    margin-left: 0px;
+                }
+                
+            }
+            
+            &:hover > a span {
+                display: block;
+            }
+            &:hover {
+                transform: translateX(0px);
+                transform: translateY(-10px);
+            }
+        }
     }
 }
 
@@ -91,6 +126,70 @@
         &__nav button {
             display: block;
             margin: 10px;
+        }
+    }
+    .socialMedia {
+
+        
+        width: 100%;
+        position: absolute;
+        right: 0px;
+        left: 0px;
+        top: auto;
+        bottom: 0px;
+        height: 105px;
+        
+        &__pages {
+            display: flex;
+            justify-content:space-around;
+        }
+        
+        &__chat{
+
+            position: fixed;
+            right: 10px;
+            bottom: 50px;
+            z-index: 5;
+
+            .WhatsApp {
+                flex-direction: column;
+                
+                &:hover {
+                    transform: translateX(0px);
+                }
+            }
+
+        }
+
+        section{
+            
+            width: 100px;
+            margin: 5px;
+
+            a{
+                flex-direction: row;
+                width: 35px;
+                height: 35px;
+                
+                img, .WhatsApp__icon {
+                    width: 35px;
+                    height: 35px;        
+                }
+
+                span {
+                    display: block;
+                    margin-left: 5px;
+                }
+                
+            }
+            
+            &:hover > a span {
+                display: block;
+            }
+            &:hover {
+                transform: translateX(0px);
+                transform: translateY(-10px);
+            }
         }
     }
 }

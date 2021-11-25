@@ -369,7 +369,39 @@ body {
   }
 
   .socialMedia {
-    right: 10px;
+    right: 0px;
+  }
+  .socialMedia__chat .WhatsApp {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .socialMedia__chat .WhatsApp:hover {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  .socialMedia section {
+    width: 70px;
+    margin: 20px auto;
+  }
+  .socialMedia section a {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .socialMedia section a span {
+    margin-left: 0px;
+  }
+  .socialMedia section:hover > a span {
+    display: block;
+  }
+  .socialMedia section:hover {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
 }
 @media screen and (max-width: 768px) {
@@ -422,5 +454,67 @@ body {
   .header__nav button {
     display: block;
     margin: 10px;
+  }
+
+  .socialMedia {
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: auto;
+    bottom: 0px;
+    height: 105px;
+  }
+  .socialMedia__pages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .socialMedia__chat {
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    z-index: 5;
+  }
+  .socialMedia__chat .WhatsApp {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .socialMedia__chat .WhatsApp:hover {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  .socialMedia section {
+    width: 100px;
+    margin: 5px;
+  }
+  .socialMedia section a {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 35px;
+    height: 35px;
+  }
+  .socialMedia section a img, .socialMedia section a .WhatsApp__icon {
+    width: 35px;
+    height: 35px;
+  }
+  .socialMedia section a span {
+    display: block;
+    margin-left: 5px;
+  }
+  .socialMedia section:hover > a span {
+    display: block;
+  }
+  .socialMedia section:hover {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
 }
